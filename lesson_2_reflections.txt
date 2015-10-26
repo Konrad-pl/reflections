@@ -6,7 +6,13 @@ How is the staging area different from the working directory and the repository?
 	
 	The staging area is a list of files you want to commit to the repository. The working directory contains all the files related to the project. The staging area lets you pick which files you want part of the commit. This lets you add a quick description related to the files you are about to commit to the repository.
 
+How can you use the staging area to make sure you have one commit per logical change?
 
+	If you have made multiple logical changes to multiple files, you can add the files you want for that logical change before commiting them to the repository. You can then repeat the process for the remaining logical changes.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	You may need to have different versions of the same code but with some small differences. Like different language support. Or you are exploring different features that you want to get ready for the master branch.
 
 Commands:
 
@@ -15,3 +21,12 @@ git init | create the .git folder that contains all the meta data
 git status | shows which files have changed since the last commit
 git add [file] | adds a file to the staging area before a commit is made
 git reset [file] | removes the file from the staging area
+git rest --hard | discards any changes made to the files in the staging area and working directory. Can't reverse this command, you will lose the changes. Check with git diff --staged before you run rest --hard to make sure you want to lose those changes.
+git log | shows the commits
+git commit -m "commit message" | commits with the description in the command line.
+git commit | will open your text editor for the commit message
+git diff | used to compare the working directory and the staging area before commiting.
+git diff --staged | This will show the changes made to the files in the staging area to the ones in the most recent commit in the repository
+git checkout master | restores the files to the most recent version from the repository
+git branch | shows which branch you are currently on
+git brach [name] | creates a new branch with the new name
