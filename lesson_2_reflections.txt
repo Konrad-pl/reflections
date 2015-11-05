@@ -14,6 +14,21 @@ What are some situations when branches would be helpful in keeping your history 
 
 	You may need to have different versions of the same code but with some small differences. Like different language support. Or you are exploring different features that you want to get ready for the master branch.
 
+How do the diagrams help you visualize the branch structure?
+	
+	By linking commits in a one way chain starting from the most recent commit.
+
+git checkout -b new_branch_name is the same as running git branch new_branch_name and then git checkout new_branch_name
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do? 
+
+	The result of merging two branches gives you a new branch with the commits from both the branches. Once they are merged you can remove the label of a branch with git delete branch [label name]. The commits will still be there in the history and you will be able to reach them from the master branch (or the branch you merged into)
+
+What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+
+	Automatic merging saves time and lets you merge the two files automatically if the changes do not interfere. When merging manually it means there was a conflict with part of the code and the related code is marked for review. This prevents bugs in the code and allows you to focus on where the conflict occurs.
+
+
 Commands:
 
 ls -a | lists all files and folders including the invisable ones
@@ -29,4 +44,10 @@ git diff | used to compare the working directory and the staging area before com
 git diff --staged | This will show the changes made to the files in the staging area to the ones in the most recent commit in the repository
 git checkout master | restores the files to the most recent version from the repository
 git branch | shows which branch you are currently on
-git brach [name] | creates a new branch with the new name
+git branch [name] | creates a new branch with the new name
+git log --graph --oneline master coins | Visual representation of the commit history
+git checkout -b new_branch_name | Create a new branch to retain commits you create
+git gc | runs the git garbage collection... the branches that don't have a name will be deleted
+git show [commit id] | Will automatically compare the commit id to its parent
+git delete branch [label name] | This is used after a merge to remove only the branch label. The commits on that branch will still be reachable from the master branch since they are now merged
+git log -n 1 | outputs the most recent commit change. The 1 can be any number depending on how many commit changes you was to output.
