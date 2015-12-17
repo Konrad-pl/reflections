@@ -1,11 +1,12 @@
 When would you want to create a remote repository rather than keeping all your work local?
 
 	If the repository is stored remotely it is easier to access it from any computer. Also it is easier to work on a project with other people if the project is stored remotely.
+	Having a remote repository makes it easier to share code. Also you don't have to worry about losing your work since it is saved on a remote computer.
 
 
 Why might you want to always pull changes manually rather than having Git automatically stay upto date with your remote repository?
 
-	You might want to finish what you are working on before syncing with the remote repository. Also if this is a large project there could be changes to the remote repository being made every minute. This would mean you wouldn't get anything done, since you would be spending all your time keeping the repository in sync.
+	You might want to finish what you are working on before syncing with the remote repository. Also if this is a large project there could be changes to the remote repository being made every minute. This would mean you wouldn't get anything done, since you would be spending all your time keeping the repository in sync.	Pulling changes manually allows you to finish what you're working on before the changes other people may have made gets added to the project. This helps eliminate code with bugs.
 
 Describe the difference between forks, clones, and branches. When would you use one instead of another?
 
