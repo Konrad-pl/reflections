@@ -1,1 +1,29 @@
 When would you want to create a remote repository rather than keeping all your work local?
+
+	If the repository is stored remotely it is easier to access it from any computer. Also it is easier to work on a project with other people if the project is stored remotely.
+
+
+Why might you want to always pull changes manually rather than having Git automatically stay upto date with your remote repository?
+
+	You might want to finish what you are working on before syncing with the remote repository. Also if this is a large project there could be changes to the remote repository being made every minute. This would mean you wouldn't get anything done, since you would be spending all your time keeping the repository in sync.
+
+Describe the difference between forks, clones, and branches. When would you use one instead of another?
+
+	Forks are used to sync github repositories to your github repository.
+	Clone is a term used within github, that is used to copy a repository onto your local machine. 
+	Branches are used for adding unique features or experimental code that is related to the master branch.
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+	This allows you to review the most recent changes so you don't end up writing code that doesn't need to be written.
+
+
+
+	git remote | view and create remotes
+	git remote add origin [link on github] | copies local repository to the github repository. Origin is the remote repository name. link on github is the address to that repository.
+	git remote -v | shows more info about remote repositories
+	git push origin master | saves local repository to your online github repository
+	git pull origin master | same as | git fetch origin | then | git merge master origin/master
+	git fetch origin | downloads the latest version of the github repository doesn't merge with your changes
+	git branch -a | shows the local branch and the remote branch
+	git status | run on the master branch git will let you know if your local master contains any commits that are not reachable from the origin/master
