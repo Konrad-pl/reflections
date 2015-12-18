@@ -18,6 +18,10 @@ What is the benefit of having a copy of the last known state of the remote store
 
 	This allows you to review the most recent changes so you don't end up writing code that doesn't need to be written.
 
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+	collaborating without git or github would be easier to make changes to the code since you don't have to deal with merge conflics. It would be harder to revert back to older versions or finding bugs in the code.
+
 
 
 	git remote | view and create remotes
